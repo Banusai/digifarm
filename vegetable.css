@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
+
+.veg_bg{
+    background-color: #E7E8D1;
+}
+
+
+.itemslist{
+    padding:0px 0px;
+}
+
+
+
+
+/*DropDown menu */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  --transition-time: 2.3s;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #212121;
+}
+
+section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.top{
+  margin-top:20px;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin: 10px 0;
+  transition: ease all var(--transition-time);
+  perspective: 1200px;
+}
+
+.card:hover .cover {
+  transform: rotateX(0deg) rotateY(-180deg);
+}
+
+.cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: ease all var(--transition-time);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.card:hover .cover:before {
+  transform: translateZ(30px);
+}
+
+.card:hover .cover:after {
+  background-color: black;
+}
+
+.card:hover .cover h1 {
+  transform: translateZ(100px);
+}
+
+.card:hover .cover .price {
+  transform: translateZ(60px);
+}
+
+.card:hover .cover a {
+  transform: translateZ(-60px) rotatey(-180deg);
+}
+
+.cover:before {
+  content: '';
+  position: absolute;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2;
+  transition: ease all var(--transition-time);
+  transform-style: preserve-3d;
+  transform: translateZ(0px);
+}
+
+.cover:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: ease all 1.3s;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.cover.item-a {
+  background-image: url('https://images.pexels.com/photos/8845078/pexels-photo-8845078.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.cover.item-b {
+  background-image: url('https://images.pexels.com/photos/4963827/pexels-photo-4963827.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.cover.item-c {
+  background-image: url('https://images.pexels.com/photos/128420/pexels-photo-128420.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
+
+.cover.item-d {
+  background-image: url('https://images.pexels.com/photos/65174/pexels-photo-65174.jpeg?auto=compress&cs=tinysrgb&w=300');
+}
+
+.cover.item-e {
+  background-image: url('https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.cover.item-f {
+  background-image: url('https://images.pexels.com/photos/2286776/pexels-photo-2286776.jpeg?auto=compress&cs=tinysrgb&w=300');
+}
+
+
+.cover.item-g {
+  background-image: url('https://images.pexels.com/photos/36438/mushrooms-brown-mushrooms-cook-eat.jpg?auto=compress&cs=tinysrgb&w=300');
+}
+
+.cover.item-h {
+  background-image: url('https://media.istockphoto.com/id/1194258667/photo/bottle-gourd-for-sale-in-market.jpg?b=1&s=612x612&w=0&k=20&c=gGAKg7x26sDuE20vXLEnWROTqxB7Ag_x-PSLYafKgp4=');
+}
+
+.cover.item-i {
+  background-image: url('https://images.pexels.com/photos/1353865/pexels-photo-1353865.jpeg?auto=compress&cs=tinysrgb&w=300');
+}
+
+.cover h1 {
+  font-weight: 600;
+  position: absolute;
+  bottom: 55px;
+  left: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all var(--transition-time);
+  z-index: 3;
+  font-size: 1.6em;
+  transform: translateZ(0px);
+}
+
+.cover .price {
+  font-weight: 300;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  color: white;
+  transform-style: preserve-3d;
+  transition: ease all var(--transition-time);
+  z-index: 4;
+  font-size: 2em;
+  transform: translateZ(0px);
+}
+
+.card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #0b0f08;
+  transform-style: preserve-3d;
+  transition: ease all var(--transition-time);
+  transform: translateZ(-1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back a {
+  transform-style: preserve-3d;
+  transition: ease transform var(--transition-time), ease background 0.5s;
+  transform: translateZ(-1px) rotatey(-180deg);
+  background: transparent;
+  border: 1px solid white;
+  font-weight: 200;
+  font-size: 1.3em;
+  color: white;
+  padding: 14px 32px;
+  outline: none;
+  text-decoration: none;
+}
+
+.card-back a:hover {
+  background-color: white;
+  color: #0b0f08;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-bar {
+    background-color: #123126;
+    height: 40px;
+    width:100%; /* Adjust height as needed */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+
+
+  
+.top_menu {
+    margin-left: 40vw;
+  }
+
+
+
+  .List_bar1 {
+    padding-left: 90vh;
+  }
+
+
+
+  .Home{
+    color: white;
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    padding: 20px;
+    margin-left:-700px;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .top_menu {
+    display: flex;
+}
+
+.List_bar1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.List_bar1 li {
+    display: inline-block;
+    margin-right: 10px; /* Adjust the spacing between links as needed */
+}
+
+.List_bar1 li:last-child {
+    margin-right: 0; /* Remove right margin from the last list item */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+footer {
+  background: #a0a18b;
+
+  color: white;
+  margin-top:100px;
+}
+
+footer a {
+  color: #fff;
+  font-size: 14px;
+  transition-duration: 0.2s;
+}
+
+footer a:hover {
+  color: #FA944B;
+  text-decoration: none;
+}
+
+.copy {
+  font-size: 12px;
+  padding: 10px;
+  border-top: 1px solid #FFFFFF;
+}
+
+.footer-middleul {
+  margin: 120px;
+  padding: 110px; 
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: white;
+}
+
+
+
+
+.footer-pad {
+  padding: 20px; /* Adjust the padding to reduce or increase space */
+}
+
+
+/*SOCİAL İCONS*/
+
+/* footer social icons */
+
+ul.social-network {
+  list-style: none;
+  display: inline;
+  margin-left: 0 !important;
+  padding: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+}
+
+
+/* footer social icons */
+
+.social-network a.icoFacebook:hover {
+  background-color: #3B5998;
+}
+
+.social-network a.icoLinkedin:hover {
+  background-color: #007bb7;
+}
+
+.social-network a.icoFacebook:hover i,
+.social-network a.icoLinkedin:hover i {
+  color: #fff;
+}
+
+.social-network a.socialIcon:hover,
+.socialHoverClass {
+  color: #44BCDD;
+}
+
+.social-circle li a {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 0 auto;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.social-circle li i {
+  margin: 0;
+  line-height: 30px;
+  text-align: center;
+}
+
+.social-circle li a:hover i,
+.triggeredHover {
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -ms--transform: rotate(360deg);
+  transform: rotate(360deg);
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.social-circle i {
+  color: #595959;
+  -webkit-transition: all 0.8s;
+  -moz-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  -ms-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.social-network a {
+  background-color: #F9F9F9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
